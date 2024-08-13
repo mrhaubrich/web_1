@@ -32,6 +32,46 @@ const { title } = Astro.props;
       white 60%
     );
   }
+  ul {
+    list-style-type: none;
+    /* make it beautiful */
+
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  h1 {
+    color: white;
+  }
+
+  li {
+    text-align: center;
+
+    /* color to the text */
+    color: white;
+  }
+
+  li a {
+    text-decoration: none;
+    color: #ddd;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  li a:hover {
+    color: rgb(var(--accent));
+    /* add glow effect */
+    text-shadow: 0 0 5px rgb(var(--accent));
+
+    /* add transition */
+    transition:
+      color 0.3s,
+      text-shadow 0.3s;
+  }
+
   html {
     font-family: system-ui, sans-serif;
     background: #292928;
