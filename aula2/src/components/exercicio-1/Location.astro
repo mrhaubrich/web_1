@@ -1,0 +1,32 @@
+---
+import Row from "@components/Row.astro";
+import { Image } from "astro:assets";
+
+interface Props {
+  location: string;
+  description: string;
+  images: {
+    src: ImageMetadata;
+    alt: string;
+    slug: string;
+  }[];
+}
+
+const { location, description, images } = Astro.props;
+---
+
+<h2>{location}</h2>
+<span>
+  {description}
+</span>
+<br />
+<br />
+<Row alignItems="center" gap="1rem">
+  {
+    images.map((image, index) => (
+      <a href={`/exercicio-1/${image.slug}`}>
+        <Image src={image.src} alt={image.alt} height={200} />
+      </a>
+    ))
+  }
+</Row>

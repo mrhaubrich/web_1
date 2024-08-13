@@ -16,7 +16,10 @@
       ],
       "@images/*": [
         "src/images/*"
-      ]
+      ],
+      "@data/*": [
+        "src/data/*"
+      ],
     },
   }
 }

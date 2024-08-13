@@ -1,0 +1,48 @@
+---
+import { locations } from "@data/exercicio-1/locations";
+import ExercicioUmLayout from "@layouts/ExercicioUmLayout.astro";
+import { Image } from "astro:assets";
+
+// Generate static paths based on image slugs
+export async function getStaticPaths() {
+  const paths: {
+    params: {
+      slug: string;
+    };
+  }[] = [];
+
+  locations.forEach((location) => {
+    location.images.forEach((image) => {
+      paths.push({ params: { slug: image.slug } });
+    });
+  });
+
+  return paths;
+}
+
+// Extract the slug from the URL parameters
+const { slug } = Astro.params;
+
+// Initialize variables for selected image and location description
+let selectedImage = null;
+
+// Find the image that matches the slug
+for (const location of locations) {
+  const image = location.images.find((img) => img.slug === slug);
+  if (image) {
+    selectedImage = image;
+    break;
+  }
+}
+
+if (!selectedImage) {
+  return Astro.rewrite("/404");
+}
+---
+
+<ExercicioUmLayout title={selectedImage.alt}>
+  <main>
+    <h1>{selectedImage.description}</h1>
+    <Image src={selectedImage.src} alt={selectedImage.alt} />
+  </main>
+</ExercicioUmLayout>
