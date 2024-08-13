@@ -1,46 +1,12 @@
 ---
-import { Image } from "astro:assets";
-import Row from "../components/Row.astro";
-import birmingham1 from "../images/birmingham-1.png";
-import birmingham2 from "../images/birmingham-2.png";
-import seattle1 from "../images/seattle-1.png";
-import seattle2 from "../images/seattle-2.png";
-import seattle3 from "../images/seattle-3.png";
-import Layout from "../layouts/Layout.astro";
+import Layout from "@layouts/Layout.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Aula 2">
   <main>
-    <h1>myPod</h1>
-    <h2>Welcome to myPod</h2>
-    <span>
-      Welcome to the place to show off your iPod, wherever you might be. Wanna
-      join the fun? All you need is any iPod, from the early classic iPod to the
-      latest iPod Nano, the smallest iPod Shuffle to the largest iPod Photo, and
-      a digital camera. Just take a snapshot of your iPod in your favorite
-      location and we'll be glad to post it on myPod. So, what are you waiting
-      for?
-    </span>
-    <h2>Seattle, Washington</h2>
-    <span>
-      Me and my iPod in Seattle! You can see rain clouds and the Space Needle.
-      You can't see the 628 coffee shops.
-    </span>
-    <Row alignItems="center" gap="1rem">
-      <Image src={seattle1} alt="Seattle 1" />
-      <Image src={seattle2} alt="Seattle 2" />
-      <Image src={seattle3} alt="Seattle 3" />
-    </Row>
-    <h2>Birmingham, Alabama</h2>
-    <span>
-      Here are some iPod photos around Birmingham. We've obviously got some
-      passionate folks over here who love their iPods. Check out the classic red
-      British telephone box!
-    </span>
-    <Row alignItems="center" gap="1rem">
-      <Image src={birmingham1} alt="Birmingham 1" />
-      <Image src={birmingham2} alt="Birmingham 2" />
-    </Row>
+    <h1>Aula 2</h1>
+    <a href="/exercicio-1">Exercício 1</a>
+    <a href="/exercicio-2">Exercício 2</a>
   </main>
 </Layout>
 

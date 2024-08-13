@@ -1,15 +1,15 @@
 ---
 interface Props {
-  justifyContent:
+  justifyContent?:
     | "flex-start"
     | "flex-end"
     | "center"
     | "space-between"
     | "space-around"
     | "space-evenly";
-  alignItems: "flex-start" | "flex-end" | "center" | "baseline" | "stretch";
-  gap: string;
-  wrap: "nowrap" | "wrap" | "wrap-reverse";
+  alignItems?: "flex-start" | "flex-end" | "center" | "baseline" | "stretch";
+  gap?: string;
+  wrap?: "nowrap" | "wrap" | "wrap-reverse";
 }
 
 const {
