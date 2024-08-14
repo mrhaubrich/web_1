@@ -1,10 +1,20 @@
 ---
+import ItemTres from "@components/exercicio-2/ItemTres.astro";
 import ItemUm from "@components/exercicio-2/ItemUm.astro";
+import VerticalTabs from "@components/tabs/VerticalTabs.tsx";
 import Layout from "@layouts/Layout.astro";
 ---
 
 <Layout title="Exercício 2">
   <main class="index">
-    <ItemUm />
+    <VerticalTabs client:load>
+      <VerticalTabs.Tab title="Item 1">
+        <ItemUm />
+      </VerticalTabs.Tab>
+      <VerticalTabs.Tab title="Item 2"> Content for Tab 2 </VerticalTabs.Tab>
+      <VerticalTabs.Tab title="Item 3">
+        <ItemTres />
+      </VerticalTabs.Tab>
+    </VerticalTabs>
   </main>
 </Layout>

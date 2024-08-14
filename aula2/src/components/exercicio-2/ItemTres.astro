@@ -1,0 +1,83 @@
+---
+import linuxorg from "@images/exercicio_dois/linuxorg.gif";
+import { Image } from "astro:assets";
+---
+
+<main class="flex flex-col items-center gap-4">
+  <h1 class="text-2xl font-bold">
+    3. Exibição da Imagem Linux.org em Diferentes Tamanhos
+  </h1>
+
+  <!-- Tamanho Natural -->
+  <section class="flex flex-col items-center">
+    <h2 class="text-xl">Tamanho Natural</h2>
+    <Image src={linuxorg} alt="Linux.org logo natural size" />
+    <p>Tamanho original da imagem.</p>
+  </section>
+
+  <!-- Largura 100px -->
+  <section class="flex flex-col items-center">
+    <h2 class="text-xl">Largura 100 pontos</h2>
+    <Image
+      src={linuxorg}
+      alt="Linux.org logo with 100px width"
+      style="width: 100px;"
+    />
+    <p>Imagem com largura de 100 pontos.</p>
+  </section>
+
+  <!-- Largura 200px -->
+  <section class="flex flex-col items-center">
+    <h2 class="text-xl">Largura 200 pontos</h2>
+    <Image
+      src={linuxorg}
+      alt="Linux.org logo with 200px width"
+      style="width: 200px;"
+    />
+    <p>Imagem com largura de 200 pontos.</p>
+  </section>
+
+  <!-- Largura 500px -->
+  <section class="flex flex-col items-center">
+    <h2 class="text-xl">Largura 500 pontos</h2>
+    <Image
+      src={linuxorg}
+      alt="Linux.org logo with 500px width"
+      style="width: 500px;"
+    />
+    <p>Imagem com largura de 500 pontos.</p>
+  </section>
+
+  <!-- Altura 50px -->
+  <section class="flex flex-col items-center">
+    <h2 class="text-xl">Altura 50 pontos</h2>
+    <Image
+      src={linuxorg}
+      alt="Linux.org logo with 50px height"
+      style="height: 50px;"
+    />
+    <p>Imagem com altura de 50 pontos.</p>
+  </section>
+
+  <!-- Altura 100px -->
+  <section class="flex flex-col items-center">
+    <h2 class="text-xl">Altura 100 pontos</h2>
+    <Image
+      src={linuxorg}
+      alt="Linux.org logo with 100px height"
+      style="height: 100px;"
+    />
+    <p>Imagem com altura de 100 pontos.</p>
+  </section>
+
+  <!-- Altura 200px -->
+  <section class="flex flex-col items-center">
+    <h2 class="text-xl">Altura 200 pontos</h2>
+    <Image
+      src={linuxorg}
+      alt="Linux.org logo with 200px height"
+      style="height: 200px;"
+    />
+    <p>Imagem com altura de 200 pontos.</p>
+  </section>
+</main>
