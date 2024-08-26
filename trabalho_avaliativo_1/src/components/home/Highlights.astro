@@ -1,0 +1,32 @@
+---
+import { carouselHighlights, highlights } from "@data/highlights";
+import NewsHighlight from "./NewsHighlight.astro";
+---
+
+<div
+  class="flex flex-row items-center justify-between h-[416px] w-full mt-4 rounded-lg shadow-md place-content-between gap-4"
+>
+  <div class="w-1/2 h-full">
+    {carouselHighlights.map((highlight) => <NewsHighlight {...highlight} />)}
+  </div>
+  <div class="flex flex-col gap-4 h-full w-1/2">
+    <!-- <div class="overflow-clip h-full rounded-md">
+      <Image
+        src="https://www.gamevicio.com/static/imagens_up/big/113/foi-revelado-o-verdadeiro-motivo-de-black-myth-wukong-ter-sido-adiado-no-xbox-series-112773.webp"
+        alt="Silent Hill 2"
+        inferSize={true}
+        class="object-cover w-full h-full hover:scale-105 transition-transform duration-300 transform-gpu"
+      />
+    </div>
+    <div class="overflow-clip h-full rounded-md">
+      <Image
+        src="https://www.gamevicio.com/static/imagens_up/big/107/por-ate-r-649-99-preco-de-star-wars-outlaws-nao-foi-muito-bem-recebido-pelos-jogadores-106179.jpg"
+        alt="Silent Hill 2"
+        inferSize={true}
+        class="object-cover w-full h-full hover:scale-105 transition-transform duration-300 transform-gpu"
+      />
+    </div>
+  </div> -->
+    {highlights.map((highlight) => <NewsHighlight {...highlight} />)}
+  </div>
+</div>
