@@ -4,12 +4,12 @@ import NewsHighlight from "../highlight/NewsHighlight.astro";
 ---
 
 <div
-  class="flex flex-row items-center justify-between h-[416px] w-full mt-4 rounded-lg place-content-between gap-4"
+  class="flex flex-row items-center justify-between h-fit mt-4 rounded-lg place-content-between gap-4"
 >
-  <div class="w-1/2 h-full">
+  <div class="w-1/2">
     {carouselHighlights.map((highlight) => <NewsHighlight {...highlight} />)}
   </div>
-  <div class="flex flex-col gap-4 h-full w-1/2">
+  <div class="flex flex-col gap-4 w-1/2">
     {highlights.map((highlight) => <NewsHighlight {...highlight} />)}
   </div>
 </div>

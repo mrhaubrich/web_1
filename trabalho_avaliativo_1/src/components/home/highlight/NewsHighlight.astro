@@ -8,7 +8,7 @@ const { slug, title, description, image, alt, type } = Astro.props;
 ---
 
 <a
-  class="h-full relative group shadow-md shadow-dark rounded-md"
+  class="relative group shadow-md shadow-dark rounded-md"
   href={`/news/${slug}`}
 >
   <ZoomOnHoverImage src={image} alt={alt} loading="eager" />

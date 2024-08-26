@@ -13,11 +13,11 @@ export default {
   safelist: [
     {
       pattern: /scale-(\d+)/, // This allows scale-100, scale-105, scale-110, etc.
-      variants: ["responsive", "hover", "focus"],
+      variants: ["responsive", "hover", "focus", "group-hover"],
     },
     {
       pattern: /scale-\[\d+(\.\d+)?\]/, // This allows arbitrary scales like scale-[1.05], scale-[1.25], etc.
-      variants: ["responsive", "hover", "focus"],
+      variants: ["responsive", "hover", "focus", "group-hover"],
     },
   ],
   plugins: [],
