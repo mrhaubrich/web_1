@@ -1,0 +1,17 @@
+---
+import { webstories } from "@data/webStories";
+import bg from "@images/666.png";
+import WebStory from "./WebStory.astro";
+---
+
+<div class="flex flex-wrap gap-4 sm:gap-6 lg:gap-7 justify-center">
+  {webstories.map((webstory) => <WebStory {...webstory} />)}
+  <div class="relative items-center justify-center flex group">
+    <WebStory
+      src={bg}
+      alt="Veja outros WebStories"
+      title="Veja outros WebStories"
+      isLast={true}
+    />
+  </div>
+</div>

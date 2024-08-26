@@ -1,10 +1,15 @@
 ---
 import Highlights from "@components/home/highlight/Highlights.astro";
+import WebStories from "@components/home/web_stories/WebStories.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-  <main class="h-[1500px] p-2">
-    <Highlights />
+<Layout title="Geme Vício">
+  <main class="min-h-screen px-4 md:px-8">
+    <div class="hidden sm:block">
+      <Highlights />
+    </div>
+    <div class="h-4 md:h-8"></div>
+    <WebStories />
   </main>
 </Layout>

@@ -2,20 +2,26 @@
 import { Image } from "astro:assets";
 
 interface Props {
-  image: string;
+  src: string | ImageMetadata;
   alt: string;
   loading?: "lazy" | "eager";
+  hoverScaleQuantity?: number;
 }
 
-const { image, alt, loading = "lazy" } = Astro.props;
+const { src, alt, loading = "lazy", hoverScaleQuantity = 1.05 } = Astro.props;
+
+// use 2 decimal places for the hover scale quantity
+const hoverScaleQuantityTw = hoverScaleQuantity.toFixed(2).replace(".", "");
+const className = `object-cover w-full h-full group-hover:scale-${hoverScaleQuantityTw} hover:scale-${hoverScaleQuantityTw} transition-all duration-500 transform-gpu`;
+console.log(className);
 ---
 
 <div class="overflow-clip h-full rounded-md">
   <Image
-    src={image}
+    src={src as string}
     alt={alt}
     inferSize={true}
     loading={loading}
-    class="object-cover w-full h-full group-hover:scale-105 transition-all duration-300 transform-gpu"
+    class={className}
   />
 </div>

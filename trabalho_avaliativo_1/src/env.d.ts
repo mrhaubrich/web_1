@@ -22,3 +22,9 @@ type Author = {
   avatar: string;
   slug: string;
 };
+
+type WebStory = {
+  src: string;
+  alt: string;
+  title: string;
+};

@@ -16,7 +16,8 @@ import Logo from "./logos/Logo.astro";
     href="/"
     effectEnabled={false}
   />
-  <div class="flex flex-row gap-2 items-center">
+  <!-- Social logos, hidden on small screens -->
+  <div class="hidden sm:flex flex-row gap-2">
     <Logo
       src={facebook}
       alt="Facebook"

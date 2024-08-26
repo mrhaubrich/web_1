@@ -1,0 +1,51 @@
+---
+import ZoomOnHoverImage from "../ZoomOnHoverImage.astro";
+
+interface Props {
+  src: ImageMetadata | string;
+  alt: string;
+  title: string;
+  isLast?: boolean;
+}
+
+const { src, alt, title, isLast = false } = Astro.props;
+---
+
+<div class="w-[110px] group flex flex-col items-center gap-1">
+  <div
+    class="h-[110px] rounded-full overflow-clip border-2 border-transparent group-hover:border-red-600 transition-all duration-300 relative items-center justify-center flex group"
+  >
+    <ZoomOnHoverImage
+      src={src}
+      alt={alt}
+      hoverScaleQuantity={1.25}
+      loading="eager"
+    />
+
+    {
+      isLast && (
+        <div class="absolute transform text-[64px] text-white group-hover:text-red-600 transition-all duration-300">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-16 w-16"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+            />
+          </svg>
+        </div>
+      )
+    }
+  </div>
+  <p
+    class="text-xs line-clamp-2 group-hover:text-red-600 transition-all duration-300 text-wrap text-center"
+  >
+    {title}
+  </p>
+</div>
