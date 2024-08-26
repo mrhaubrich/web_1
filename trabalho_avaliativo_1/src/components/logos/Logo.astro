@@ -1,0 +1,27 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+    src: ImageMetadata;
+    alt: string;
+    href: string;
+    target?: string;
+    rel?: string;
+    height?: number;
+    effectEnabled?: boolean;
+}
+
+const {
+    src,
+    alt,
+    href,
+    target,
+    rel,
+    height = 30,
+    effectEnabled = true,
+} = Astro.props;
+---
+
+<a href={href} target={target} rel={rel}>
+    <Image src={src} alt={alt}  height={height} class={effectEnabled ? 'grayscale hover:grayscale-0' : ''} />
+</a>

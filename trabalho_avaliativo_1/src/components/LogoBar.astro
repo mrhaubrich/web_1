@@ -1,0 +1,20 @@
+---
+import discord from '@images/logo/discord.png';
+import facebook from '@images/logo/facebook.webp';
+import instagram from '@images/logo/instagram.webp';
+import logo from '@images/logo/logo-black.webp';
+import twitter from '@images/logo/twitter.png';
+import youtube from '@images/logo/youtube.png';
+import Logo from './logos/Logo.astro';
+---
+
+<div class="flex flex-row px-16 py-2 place-content-between items-center">
+    <Logo src={logo} alt="Gamevicio Logo" height={55} href='/' effectEnabled={false} />
+    <div class="flex flex-row gap-2 items-center">
+        <Logo src={facebook} alt="Facebook" href="https://www.gamevicio.com/FaceGV/" target="_blank" rel="noopener noreferrer" />
+        <Logo src={twitter} alt="Twitter" href="https://www.gamevicio.com/TwitterGV/" target="_blank" rel="noopener noreferrer" />
+        <Logo src={instagram} alt="Instagram" href="https://www.gamevicio.com/InstaGV/" target="_blank" rel="noopener noreferrer" />
+        <Logo src={youtube} alt="Youtube" href="https://www.gamevicio.com/YoutubeGV/" target="_blank" rel="noopener noreferrer" />
+        <Logo src={discord} alt="Discord" href="https://www.gamevicio.com/DiscordGV/" target="_blank" rel="noopener noreferrer" />
+    </div>
+</div>
