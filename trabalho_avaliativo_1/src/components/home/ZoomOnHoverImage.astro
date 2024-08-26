@@ -1,0 +1,21 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  image: string;
+  alt: string;
+  loading?: "lazy" | "eager";
+}
+
+const { image, alt, loading = "lazy" } = Astro.props;
+---
+
+<div class="overflow-clip h-full rounded-md">
+  <Image
+    src={image}
+    alt={alt}
+    inferSize={true}
+    loading={loading}
+    class="object-cover w-full h-full group-hover:scale-105 transition-all duration-300 transform-gpu"
+  />
+</div>
