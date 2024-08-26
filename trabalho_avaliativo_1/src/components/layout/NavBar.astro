@@ -1,91 +1,167 @@
 ---
-import logoP from '@images/logo/logo-p-white.webp';
-import { Image } from 'astro:assets';
-import NavBarItem from './navbar/NavBarItem.astro';
-
+import logoP from "@images/logo/logo-p-white.webp";
+import { Image } from "astro:assets";
+import NavBarItem from "./navbar/NavBarItem.astro";
 ---
-<div id="sticky-parent" class="flex flex-row items-center px-24 bg-dark h-14 border-red-500 border-b-4 sticky top-0 z-50 place-content-between">
-    <div class="flex flex-row items-center h-full">
-        <NavBarItem>
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-            </svg>
-        </NavBarItem>
-        <div id="sticky-text" class="hidden opacity-0 transition-opacity duration-500 h-full">
-            <NavBarItem>
-                <a href="/">
-                    <Image src={logoP} alt="Logo GameVicio" height={44} />
-                </a>
-            </NavBarItem>
-        </div>
-        <NavBarItem>
-            <a href="/games">Games</a>
-        </NavBarItem>
-        <NavBarItem>
-            <a href="/otaku">Otaku</a>
-        </NavBarItem>
-        <NavBarItem>
-            <a href="/entretenimento">Entretenimento</a>
-        </NavBarItem>
-        <NavBarItem>
-            <a href="/analises">Análises</a>
-        </NavBarItem>
-        <NavBarItem>
-            <a href="/mais-lidas">Mais Lidas</a>
-        </NavBarItem>
+
+<div
+  id="sticky-parent"
+  class="flex flex-row items-center px-24 bg-dark h-14 border-red-500 border-b-4 sticky top-0 z-50 place-content-between"
+>
+  <div class="flex flex-row items-center h-full">
+    <NavBarItem>
+      <svg
+        class="w-6 h-6 text-white"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </NavBarItem>
+    <div
+      id="sticky-text"
+      class="hidden opacity-0 transition-opacity duration-500 h-full"
+    >
+      <NavBarItem>
+        <a href="/">
+          <Image src={logoP} alt="Logo GameVicio" height={44} />
+        </a>
+      </NavBarItem>
     </div>
-    <div class="flex flex-row items-center h-full">
-        <NavBarItem>
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-5.2-5.2"></path>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10.5C15 7.467 12.533 5 9.5 5S4 7.467 4 10.5 6.467 16 9.5 16 15 13.533 15 10.5z"></path>
-            </svg>
-        </NavBarItem>
-        <NavBarItem>
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5c-3.866 0-7 3.134-7 7s3.134 7 7 7 7-3.134 7-7-3.134-7-7-7z"></path>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 1v2"></path>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21v2"></path>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.22 4.22l1.42 1.42"></path>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.36 18.36l1.42 1.42"></path>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 12h2"></path>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12h2"></path>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.22 19.78l1.42-1.42"></path>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.36 5.64l1.42-1.42"></path>
-            </svg>
-        </NavBarItem>
-    </div>
+    <NavBarItem>
+      <a href="/games">Games</a>
+    </NavBarItem>
+    <NavBarItem>
+      <a href="/otaku">Otaku</a>
+    </NavBarItem>
+    <NavBarItem>
+      <a href="/entretenimento">Entretenimento</a>
+    </NavBarItem>
+    <NavBarItem>
+      <a href="/analises">Análises</a>
+    </NavBarItem>
+    <NavBarItem>
+      <a href="/mais-lidas">Mais Lidas</a>
+    </NavBarItem>
+  </div>
+  <div class="flex flex-row items-center h-full">
+    <NavBarItem>
+      <svg
+        class="w-6 h-6 text-white"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M21 21l-5.2-5.2"></path>
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M15 10.5C15 7.467 12.533 5 9.5 5S4 7.467 4 10.5 6.467 16 9.5 16 15 13.533 15 10.5z"
+        ></path>
+      </svg>
+    </NavBarItem>
+    <NavBarItem>
+      <svg
+        class="w-6 h-6 text-white"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M12 5c-3.866 0-7 3.134-7 7s3.134 7 7 7 7-3.134 7-7-3.134-7-7-7z"
+        ></path>
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M12 1v2"></path>
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M12 21v2"></path>
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4.22 4.22l1.42 1.42"></path>
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M18.36 18.36l1.42 1.42"></path>
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M1 12h2"></path>
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M21 12h2"></path>
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4.22 19.78l1.42-1.42"></path>
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M18.36 5.64l1.42-1.42"></path>
+      </svg>
+    </NavBarItem>
+  </div>
 </div>
 
 <script>
-    const stickyParent = document.getElementById('sticky-parent');
-    const stickyText = document.getElementById('sticky-text');
-    let isAnimating = false;
+  const stickyParent = document.getElementById("sticky-parent");
+  const stickyText = document.getElementById("sticky-text");
+  let isAnimating = false;
 
-    window.addEventListener('scroll', () => {
-        const isStuck = stickyParent!.getBoundingClientRect().top <= 0;
+  window.addEventListener("scroll", () => {
+    const isStuck = stickyParent!.getBoundingClientRect().top <= 0;
 
-        if (isStuck && !isAnimating && stickyText!.classList.contains('hidden')) {
-            isAnimating = true;
-            stickyText!.classList.remove('hidden');
-            setTimeout(() => {
-                stickyText!.classList.add('opacity-100');
-                stickyText!.classList.remove('opacity-0');
-                setTimeout(() => {
-                    isAnimating = false;
-                }, 500);
-            }, 50);
+    if (isStuck && !isAnimating && stickyText!.classList.contains("hidden")) {
+      isAnimating = true;
+      stickyText!.classList.remove("hidden");
+      setTimeout(() => {
+        stickyText!.classList.add("opacity-100");
+        stickyText!.classList.remove("opacity-0");
+        setTimeout(() => {
+          isAnimating = false;
+        }, 500);
+      }, 50);
+    } else if (
+      !isStuck &&
+      !isAnimating &&
+      !stickyText!.classList.contains("hidden")
+    ) {
+      isAnimating = true;
+      stickyText!.classList.add("opacity-0");
+      stickyText!.classList.remove("opacity-100");
 
-        }
-        else if (!isStuck && !isAnimating && !stickyText!.classList.contains('hidden')) {
-            isAnimating = true;
-            stickyText!.classList.add('opacity-0');
-            stickyText!.classList.remove('opacity-100');
-
-            setTimeout(() => {
-                stickyText!.classList.add('hidden');
-                isAnimating = false;
-            }, 500);
-        }
-    });
+      setTimeout(() => {
+        stickyText!.classList.add("hidden");
+        isAnimating = false;
+      }, 500);
+    }
+  });
 </script>

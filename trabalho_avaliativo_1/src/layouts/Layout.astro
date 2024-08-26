@@ -1,10 +1,10 @@
 ---
-import Footer from '@components/layout/Footer.astro';
-import LogoBar from '@components/layout/LogoBar.astro';
-import NavBar from '@components/layout/NavBar.astro';
+import Footer from "@components/layout/Footer.astro";
+import LogoBar from "@components/layout/LogoBar.astro";
+import NavBar from "@components/layout/NavBar.astro";
 
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -12,18 +12,18 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Site de notícias" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<LogoBar />
-		<NavBar />
-		<slot />
-		<Footer />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Site de notícias" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <LogoBar />
+    <NavBar />
+    <slot />
+    <Footer />
+  </body>
 </html>

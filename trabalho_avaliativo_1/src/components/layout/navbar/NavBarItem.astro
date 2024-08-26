@@ -1,17 +1,15 @@
 ---
 interface Props {
-    id?: string;
-    class?: string;
+  id?: string;
+  class?: string;
 }
 
-const {
-    id,
-    class: className,
-} = Astro.props;
+const { id, class: className } = Astro.props;
 ---
+
 <div
-    class={`transition-colors duration-300 ease-in-out hover:bg-dark-hover ${className} text-dark-text text-lg uppercase flex h-full items-center px-3`}
-    id={id}
+  class={`transition-colors duration-300 ease-in-out hover:bg-dark-hover ${className} text-dark-text text-lg uppercase flex h-full items-center px-3`}
+  id={id}
 >
-    <slot />
+  <slot />
 </div>
