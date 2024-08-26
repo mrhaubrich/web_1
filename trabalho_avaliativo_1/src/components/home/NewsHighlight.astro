@@ -1,21 +1,14 @@
 ---
-import Tag from "@components/Tag.astro";
+import NewsType from "@components/home/NewsType.astro";
 import { Image } from "astro:assets";
 
-interface Props {
-  href: string;
-  title: string;
-  description: string;
-  image: string;
-  alt: string;
-  tag: string;
-}
+type Props = NewsModel;
 
-const { href, title, description, image, alt, tag } = Astro.props;
+const { slug, title, description, image, alt, type } = Astro.props;
 ---
 
 <div class="overflow-clip h-full rounded-md relative group" id={title}>
-  <a href={href}>
+  <a href={`/news/${slug}`}>
     <Image
       src={image}
       alt={alt}
@@ -33,9 +26,9 @@ const { href, title, description, image, alt, tag } = Astro.props;
       <p class="text-dark-text">{description}</p>
     </div>
     <div class="absolute top-3 left-3">
-      <Tag>
-        <p>{tag}</p>
-      </Tag>
+      <NewsType>
+        <p>{type}</p>
+      </NewsType>
     </div>
   </a>
 </div>
