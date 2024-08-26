@@ -4,8 +4,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        footer: "#282424",
-        "footer-text": "#eee",
+        dark: "#232322",
+        "dark-text": "#eee",
+        "dark-hover": "#383838",
       },
     },
   },
