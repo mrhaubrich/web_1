@@ -1,0 +1,26 @@
+---
+import ZoomOnHoverImage from "../ZoomOnHoverImage.astro";
+
+type Props = NewsModel;
+---
+
+<div
+  class="relative border-b-[2.5px] border-red-600 h-48 w-2/3 flex flex-row content-start rounded-l-md group cursor-pointer"
+>
+  <div class="w-2/5 h-full">
+    <ZoomOnHoverImage src={Astro.props.image} alt={Astro.props.title} />
+  </div>
+  <div class="w-3/5 pl-6 flex flex-col gap-4 place-content-between">
+    <div>
+      <h2 class="text-xl text-gray-800 group-hover:text-red-600">
+        {Astro.props.title}
+      </h2>
+      <p class="text-md text-gray-600 mt-2">{Astro.props.description}</p>
+    </div>
+    <div class="mb-4">
+      <h2 class="text-sm text-gray-800">
+        Por <b class="text-bold">{Astro.props.author.name}</b>, 4 horas atrás
+      </h2>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,8 @@
 ---
 import Highlights from "@components/home/highlight/Highlights.astro";
+import News from "@components/home/news/News.astro";
 import WebStories from "@components/home/web_stories/WebStories.astro";
+import { news } from "@data/news";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -11,5 +13,10 @@ import Layout from "../layouts/Layout.astro";
     </div>
     <div class="h-4 md:h-4"></div>
     <WebStories />
+    <div class="h-4 md:h-4"></div>
+    {news.map((news) => (
+      <News {...news} />
+      <div class="h-4 md:h-4"></div>
+    ))}
   </main>
 </Layout>
