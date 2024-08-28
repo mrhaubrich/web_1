@@ -28,3 +28,13 @@ type WebStory = {
   alt: string;
   title: string;
 };
+
+type NewsElement = {
+  data: string;
+  type: "paragraph" | "image" | "citation" | "source";
+};
+
+type NewsDetail = NewsModel & {
+  cover: string;
+  elements: Element[];
+};

@@ -1,6 +1,6 @@
 import { coca } from "./authors";
 
-export const highlights: NewsModel[] = [
+export const highlights: NewsDetail[] = [
   // https://www.gamevicio.com/noticias/2024/08/foi-revelado-o-verdadeiro-motivo-de-black-myth-wukong-ter-sido-adiado-no-xbox-series/
   {
     image:
@@ -14,6 +14,9 @@ export const highlights: NewsModel[] = [
     slug: "black-myth-wukong",
     author: coca,
     date: "2024-08-26 10:15",
+    cover:
+      "https://www.gamevicio.com/static/imagens_up/big/113/foi-revelado-o-verdadeiro-motivo-de-black-myth-wukong-ter-sido-adiado-no-xbox-series-112773.webp",
+    elements: [],
   },
   // https://www.gamevicio.com/noticias/2024/08/confira-as-notas-de-star-wars-outlaws/
   {
@@ -26,10 +29,13 @@ export const highlights: NewsModel[] = [
     slug: "star-wars-outlaws",
     author: coca,
     date: "2024-08-26 09:36",
+    cover:
+      "https://www.gamevicio.com/static/imagens_up/big/107/por-ate-r-649-99-preco-de-star-wars-outlaws-nao-foi-muito-bem-recebido-pelos-jogadores-106179.jpg",
+    elements: [],
   },
 ];
 
-export const carouselHighlights: NewsModel[] = [
+export const carouselHighlights: NewsDetail[] = [
   // https://www.gamevicio.com/noticias/2024/08/ps5-pro-teria-sido-mencionado-por-diversos-desenvolvedores-durante-a-gamescom-2024/
   {
     image:
@@ -43,5 +49,9 @@ export const carouselHighlights: NewsModel[] = [
     slug: "playstation-5-pro",
     author: coca,
     date: "2024-08-26 08:45",
+
+    cover:
+      "https://www.gamevicio.com/static/imagens_up/big/106/amd-sugere-que-o-playstation-5-pro-tera-ai-upscaling-105203.jpg",
+    elements: [],
   },
 ];

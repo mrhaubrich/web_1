@@ -6,20 +6,29 @@ interface Props {
   alt: string;
   loading?: "lazy" | "eager";
   hoverScaleQuantity?: number;
+  class?: string;
+  rounded?: boolean;
 }
 
-const { src, alt, loading = "lazy", hoverScaleQuantity = 1.05 } = Astro.props;
+const {
+  src,
+  alt,
+  loading = "lazy",
+  hoverScaleQuantity = 1.05,
+  rounded = true,
+  ...rest
+} = Astro.props;
 
 // use 2 decimal places for the hover scale quantity
 const hoverScaleQuantityTw = hoverScaleQuantity.toFixed(2).replace(".", "");
 ---
 
-<div class="overflow-clip h-full w-full rounded-md">
+<div class=`overflow-clip h-full w-full ${rounded ? 'rounded-md' : ''}`>
   <Image
     src={src as string}
     alt={alt}
     inferSize={true}
     loading={loading}
-    class={`object-cover w-full h-full group-hover:scale-${hoverScaleQuantityTw} hover:scale-${hoverScaleQuantityTw} transition-all duration-500 transform-gpu`}
+    class={`object-cover w-full h-full group-hover:scale-${hoverScaleQuantityTw} hover:scale-${hoverScaleQuantityTw} transition-all duration-500 transform-gpu ${rest.class}`}
   />
 </div>

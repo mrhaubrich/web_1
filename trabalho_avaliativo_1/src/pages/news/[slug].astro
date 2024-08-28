@@ -1,0 +1,49 @@
+---
+import ZoomOnHoverImage from "@components/home/ZoomOnHoverImage.astro";
+import { carouselHighlights, highlights } from "@data/highlights";
+import Layout from "@layouts/Layout.astro";
+import type { GetStaticPaths } from "astro";
+
+// Generate static paths for all possible slugs
+export const getStaticPaths = (() => {
+  const news = highlights.concat(carouselHighlights);
+  return news.map((news) => {
+    return {
+      params: {
+        slug: news.slug,
+      },
+    };
+  });
+}) satisfies GetStaticPaths;
+
+// Find the news article based on the slug
+const news = highlights
+  .concat(carouselHighlights)
+  .find((item) => item.slug.toLowerCase() === Astro.params.slug);
+
+if (!news) {
+  // Return a 404 Response
+  return new Response(null, { status: 404 });
+}
+---
+
+<Layout title={news.title} class="!mx-0 !px-0 sm:!px-0 lg:!px-0">
+  <div>
+    <ZoomOnHoverImage
+      src={news.cover}
+      alt={news.title}
+      hoverScaleQuantity={1.05}
+      rounded={false}
+      class="!w-screen !h-[450px] object-cover !rounded-none"
+    />
+    <!-- Main Content on Top of the Image -->
+    <main class="relative -top-32 inset-0 mx-auto">
+      <div class="bg-slate-50 p-4 w-[90%] rounded-md mx-auto shadow-md">
+        <span>{news.description.concat(" ").repeat(30)}</span>
+        <br />
+        <br />
+        <span>{news.description.concat(" ").repeat(30)}</span>
+      </div>
+    </main>
+  </div>
+</Layout>
