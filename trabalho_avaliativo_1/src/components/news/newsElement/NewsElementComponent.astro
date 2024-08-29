@@ -15,7 +15,14 @@ const { data, type } = Astro.props;
   )
 }
 
-{type === "embed" && <div class="h-auto aspect-video" set:html={data} />}
+{
+  type === "embed" && (
+    <div
+      class="h-auto aspect-video rounded-lg overflow-hidden"
+      set:html={data}
+    />
+  )
+}
 
 {
   type === "quote" && (
