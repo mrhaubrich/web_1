@@ -7,10 +7,14 @@ import vercel from "@astrojs/vercel/static";
 export default defineConfig({
   integrations: [tailwind()],
   image: {
-    remotePatterns: [{
-      protocol: "https"
-    }]
+    remotePatterns: [
+      {
+        protocol: "https",
+      },
+    ],
   },
   output: "static",
-  adapter: vercel()
+  adapter: vercel({
+    webAnalytics: { enabled: true },
+  }),
 });
