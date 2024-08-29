@@ -144,6 +144,44 @@ export const carouselHighlights: NewsDetail[] = [
 
     cover:
       "https://www.gamevicio.com/static/imagens_up/big/106/amd-sugere-que-o-playstation-5-pro-tera-ai-upscaling-105203.jpg",
-    elements: [],
+    elements: [
+      {
+        data: "Rumores sobre um possível PlayStation 5 Pro circulam pela internet há meses, mas até o atual momento, a Sony não anunciou nada oficialmente, gerando muitas dúvidas.",
+        type: "paragraph",
+      },
+      {
+        data: "No entanto, tudo indica que o modelo aprimorado do console é real e para completar que ele existe, até mesmo um jornalista provocou o lançamento iminente do PlayStation 5 Pro.",
+        type: "paragraph",
+      },
+      {
+        data: 'Segundo os detalhes, um suposto desenvolvedor tomou a decisão de adiar o seu jogo por causa do PlayStation 5 Pro. Além disso, este modelo do console teria sido mencionado por diversos desenvolvedores durante a Gamescom 2024, que no caso seria um tipo de "segredo aberto" entre os devs.',
+        type: "paragraph",
+      },
+      {
+        data: "https://www.gamevicio.com/static/imagens_up/big/102/ps5-pro-sera-lancado-em-setembro-de-2024-afirma-jornalista-101396.jpg",
+        type: "image",
+      },
+      {
+        data: '"Um desenvolvedor, cujo nome não mencionarei, deixou escapar a confirmação de que o PS5 Pro está chegando. Eles me disseram que queriam lançar seu jogo até o final do ano, mas decidiram desacelerar o desenvolvimento por causa do lançamento do PS5 Pro", disse o jornalista.',
+        type: "quote",
+      },
+      {
+        data: "O portal de notícias Wccftech reforça essas informações, alegando que um desenvolvedor estava bastante empolgado com o hardware do PlayStation 5 Pro e que o Unreal Engine 5 rodaria muito melhor no novo hardware.",
+        type: "paragraph",
+      },
+      {
+        data: `"Sem que eu precisasse perguntar, um desenvolvedor, cujo nome não vou revelar, disse que recebeu as especificações do PS5 Pro e estava confiante de que a Unreal Engine 5 rodaria muito melhor no novo hardware em comparação com o PlayStation 5 normal." <br/> <br/>
+"Considerando as circunstâncias reveladas pelo jornalista, estou certo de que este não é o mesmo desenvolvedor com quem eles falaram. Além disso, o estúdio de onde ouvi isso não é grande, o que deixa claro que as especificações e os detalhes do hardware já estão nas mãos de um grande número de desenvolvedores de jogos."`,
+        type: "quote",
+      },
+      {
+        data: "Rumores indicam que o plano da Sony é anunciar o PS5 Pro em setembro e lançar no final deste ano.",
+        type: "paragraph",
+      },
+      {
+        data: 'Fonte: <a class="text-blue-600" href="https://wccftech.com/ps5-pro-was-an-open-secret-at-gamescom-2024/" target="_blank">Wccftech</a>',
+        type: "paragraph",
+      },
+    ],
   },
 ];

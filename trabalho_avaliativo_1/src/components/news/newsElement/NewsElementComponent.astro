@@ -11,7 +11,7 @@ const { data, type } = Astro.props;
 
 {
   type === "image" && (
-    <Image src={data} alt="Image" class="w-full h-auto" inferSize />
+    <Image src={data} alt="Image" class="w-full h-auto rounded-md" inferSize />
   )
 }
 
