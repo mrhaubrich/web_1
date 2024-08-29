@@ -31,10 +31,10 @@ type WebStory = {
 
 type NewsElement = {
   data: string;
-  type: "paragraph" | "image" | "citation" | "source";
+  type: "paragraph" | "image" | "quote" | "source" | "video" | "embed";
 };
 
 type NewsDetail = NewsModel & {
   cover: string;
-  elements: Element[];
+  elements: NewsElement[];
 };

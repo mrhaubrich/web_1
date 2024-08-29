@@ -1,0 +1,19 @@
+---
+interface Props {
+  href: string;
+  title: string;
+  type: string;
+}
+
+const { href, title, type } = Astro.props;
+
+// random days ago
+const daysAgo = Math.floor(Math.random() * 10) + 1;
+---
+
+<div
+  class="py-2 border-b-1 border-dark-text border-b border-opacity-50 truncate"
+>
+  <a class="truncate" href={href} title={title}>{title}</a>
+  <p class="text-sm">{type}, Por <b>coca</b>, {daysAgo} dias atrás</p>
+</div>

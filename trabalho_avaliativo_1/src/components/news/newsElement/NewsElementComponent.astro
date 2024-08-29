@@ -1,0 +1,41 @@
+---
+import { Image } from "astro:assets";
+import Quote from "../Quote.astro";
+
+type Props = NewsElement;
+
+const { data, type } = Astro.props;
+---
+
+{type === "paragraph" && <p set:html={data} />}
+
+{
+  type === "image" && (
+    <Image src={data} alt="Image" class="w-full h-auto" inferSize />
+  )
+}
+
+{type === "embed" && <div class="h-auto aspect-video" set:html={data} />}
+
+{
+  type === "quote" && (
+    <Quote class="ml-4">
+      <p set:html={data} />
+    </Quote>
+  )
+}
+
+{
+  type === "source" && (
+    <p class="text-sm font-normal text-gray-600">
+      Fonte:
+      <a
+        href={data}
+        class="text-blue-800 font-bold hover:underline visited:text-purple-800"
+        target="_blank"
+      >
+        {data}
+      </a>
+    </p>
+  )
+}

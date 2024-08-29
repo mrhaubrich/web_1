@@ -1,0 +1,41 @@
+---
+import NewsType from "@components/home/NewsType.astro";
+
+interface Props {
+  title: string;
+  subtitle: string;
+  author: Author;
+  createdAt: string;
+  type: string;
+}
+
+const { title, subtitle, author, type, createdAt } = Astro.props;
+
+const created = new Date(createdAt).toLocaleDateString("pt-BR", {
+  day: "numeric",
+  month: "short",
+  year: "numeric",
+  hour: "numeric",
+  minute: "numeric",
+});
+---
+
+<div class="flex flex-col border-l-[3px] border-red-500 px-4">
+  <h1 class="text-3xl font-light shadow-[1px 0 1px rgba(0, 0, 0, .2);">
+    {title}
+  </h1>
+  <h2
+    class="text-xl font-light shadow-[1px 0 1px rgba(0, 0, 0, .2); underline decoration-[#ccc]"
+  >
+    {subtitle}
+  </h2>
+  <div class="flex flex-row items-center gap-2 mt-2">
+    <NewsType>{type}</NewsType>
+    <p class="text-sm font-light">
+      Publicado por <a
+        href=`https://www.gamevicio.com/posts/?u=${author.name}`
+        class="text-blue-800 font-bold">{author.name}</a
+      >, em {created}
+    </p>
+  </div>
+</div>

@@ -7,7 +7,7 @@ interface Props {
   loading?: "lazy" | "eager";
   hoverScaleQuantity?: number;
   class?: string;
-  rounded?: boolean;
+  containerClass?: string;
 }
 
 const {
@@ -15,7 +15,6 @@ const {
   alt,
   loading = "lazy",
   hoverScaleQuantity = 1.05,
-  rounded = true,
   ...rest
 } = Astro.props;
 
@@ -23,7 +22,7 @@ const {
 const hoverScaleQuantityTw = hoverScaleQuantity.toFixed(2).replace(".", "");
 ---
 
-<div class=`overflow-clip h-full w-full ${rounded ? 'rounded-md' : ''}`>
+<div class=`overflow-clip h-full w-full rounded-md ${rest.containerClass}`>
   <Image
     src={src as string}
     alt={alt}

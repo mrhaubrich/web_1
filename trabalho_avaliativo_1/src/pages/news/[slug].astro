@@ -1,6 +1,10 @@
 ---
 import ZoomOnHoverImage from "@components/home/ZoomOnHoverImage.astro";
+import NewsElementComponent from "@components/news/newsElement/NewsElementComponent.astro";
+import PublicacaoDestaque from "@components/news/PublicacaoDestaque.astro";
+import Title from "@components/news/Title.astro";
 import { carouselHighlights, highlights } from "@data/highlights";
+import { news as _news } from "@data/news";
 import Layout from "@layouts/Layout.astro";
 import type { GetStaticPaths } from "astro";
 
@@ -33,16 +37,55 @@ if (!news) {
       src={news.cover}
       alt={news.title}
       hoverScaleQuantity={1.05}
-      rounded={false}
-      class="!w-screen !h-[450px] object-cover !rounded-none"
+      class="object-cover !rounded-none"
+      containerClass="!w-screen !h-auto !rounded-none"
     />
     <!-- Main Content on Top of the Image -->
     <main class="relative -top-32 inset-0 mx-auto">
       <div class="bg-slate-50 p-4 w-[90%] rounded-md mx-auto shadow-md">
-        <span>{news.description.concat(" ").repeat(30)}</span>
-        <br />
-        <br />
-        <span>{news.description.concat(" ").repeat(30)}</span>
+        <Title
+          author={news.author}
+          createdAt={news.date}
+          subtitle={news.description}
+          title={news.title}
+          type={news.type}
+        />
+        <div class="h-8"></div>
+        <div class="flex flex-row">
+          <div class="w-3/4 pr-4">
+            {
+              news.elements.map((element) => (
+                <>
+                  <NewsElementComponent {...element} />
+                  <br />
+                </>
+              ))
+            }
+          </div>
+          <div class="w-1/4">
+            <p class="border-l-4 pl-2 border-red-600 uppercase font-bold mb-2">
+              Publicações em Destaque
+            </p>
+            <div
+              class="bg-dark text-dark-text flex flex-col rounded-md p-2 px-4"
+            >
+              {
+                _news.map((news) => (
+                  <PublicacaoDestaque
+                    href={`/news/${news.slug}`}
+                    title={news.title}
+                    type={news.type}
+                  />
+                ))
+              }
+              <a
+                class="text-center uppercase pt-4 pb-2 font-light text-xs"
+                href="https://www.gamevicio.com/posts/"
+                >Mais Publicações
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   </div>

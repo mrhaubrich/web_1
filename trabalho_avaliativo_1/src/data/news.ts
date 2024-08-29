@@ -38,4 +38,16 @@ export const news: NewsModel[] = [
     slug: "shadow-of-the-road-e-revelado-novo-crpg-steampunk-no-japao-feudal",
     type: "#games",
   },
+  {
+    title: "Borderlands perde o posto de pior estreia de 2024",
+    description:
+      "Reboot de O Corvo conseguiu uma bilheteria de estreia ainda pior.",
+    alt: "Borderlands perde o posto de pior estreia de 2024",
+    author: coca,
+    date: "2024-08-26 16:09",
+    image:
+      "https://www.gamevicio.com/static/imagens_up/big/113/borderlands-perde-o-posto-de-pior-estreia-de-2024-112937.webp",
+    slug: "shadow-of-the-road-e-revelado-novo-crpg-steampunk-no-japao-feudal",
+    type: "Entretenimento",
+  },
 ];
